@@ -1,5 +1,7 @@
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
+ctx.canvas.width  = window.innerWidth;
+ctx.canvas.height = window.innerHeight;
 const width = canvas.width;
 const height = canvas.height;
 
@@ -10,7 +12,7 @@ const topLeft = {
 
 let zoomConst = 1;
 let xZoomConst = width*zoomConst/3;
-let yZoomConst = height*zoomConst/2;
+let yZoomConst = zoomConst/(3/width);
 let eyes = {};
 
 const squareC = (c) => {
@@ -115,7 +117,7 @@ const checkPoint = (point) => {
 
 const calcConsts = (x,y) => {
   xZoomConst = width*zoomConst/3;
-  yZoomConst = height*zoomConst/2;
+  yZoomConst = zoomConst/(3/width);
 
   const centerA = topLeft.a + x / xZoomConst * zoomFactor;
   const centerB = topLeft.b + y / yZoomConst * zoomFactor;
