@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/ant/precache-manifest.c73eaa5b0e4c2ba11ccc34d4c4d6f2bf.js"
+  "/mandelbART/precache-manifest.0bb5e6496e9e68eb3cc2c855172b2bb0.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/ant/index.html", {
+workbox.routing.registerNavigationRoute("/mandelbART/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
