@@ -84,7 +84,11 @@ class App extends Component {
   };
 
   changePalette = () => {
-    const palette = ["#faa916", "#bd312d", "#31393c", "#2176ff", "#06a77d"];
+    // const palette = ["#faa916", "#bd312d", "#31393c", "#2176ff", "#06a77d"];
+    // const palette = ['#34356D','#FF5C52','#FEE84D','#6BAE58','#A7DBEA'];
+    // const palette = ['#ffffff','#000000'];
+    // const palette = ['#BF0A30','#ffffff','#002868'];
+    const palette = ['#BF0A30','#ffffff'];
     this.setState({ palette });
     this.state.mandelbrot.recolor(palette);
   };
@@ -104,6 +108,10 @@ class App extends Component {
       zoomConst: 1
     })
     this.state.mandelbrot.reset();
+  }
+
+  save = () => {
+    this.state.mandelbrot.save();
   }
 
   hexToRGB = hex => {
@@ -168,6 +176,7 @@ class App extends Component {
           changePalette={this.changePalette}
           resize={this.resize}
           reset={this.reset}
+          save={this.save}
           toggleRunning={this.toggleRunning}
         />
       </div>

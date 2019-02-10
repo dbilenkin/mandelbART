@@ -13,10 +13,6 @@ class Draw extends Component {
     this.props.state.mandelbrot.update(this.props.state);
   }
 
-  resetCanvas = () => {
-    this.props.reset();
-  };
-
   changeZoom = ({ clientX, clientY }) => {
     this.props.changeZoomConst();
     this.props.state.mandelbrot.zoom({ clientX, clientY });
@@ -35,12 +31,13 @@ class Draw extends Component {
         </div>
         <div className="interaction">
           <div className="buttons">
-            <Button basic color="purple" onClick={this.resetCanvas}>
+            <Button basic color="purple" onClick={this.props.reset}>
               Reset
             </Button>
-            <Button basic color="blue" onClick={this.props.state.mandelbrot.save}>
+            <Button basic color="blue" onClick={this.props.save}>
               Save
             </Button>
+            <div id="savePercentage"></div>
           </div>
           <div>Zoom: {this.props.state.zoomConst}</div>
           <div className="sliders">
