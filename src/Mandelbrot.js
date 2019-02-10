@@ -66,8 +66,9 @@ export default class Mandelbrot {
     this.ctx.fillRect(point.x, point.y, 1, 1);
   }
 
-  recolor = (palette) => {
+  recolor = (palette, colorSmooth) => {
     this.state.palette = palette;
+    if (colorSmooth) this.state.colorSmooth = colorSmooth;
     this.makeColorsFromPalette();
     for (let x = 0; x < this.width; x++) {
       for (let y = 0; y < this.height; y++) {

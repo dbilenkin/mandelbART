@@ -14,24 +14,13 @@ class Draw extends Component {
   }
 
   resetCanvas = () => {
-    this.props.state.mandelbrot.reset(this.canvas);
+    this.props.reset();
   };
 
   changeZoom = ({ clientX, clientY }) => {
     this.props.changeZoomConst();
     this.props.state.mandelbrot.zoom({ clientX, clientY });
   };
-
-  changePalette = () => {
-    const palette = ['#faa916','#bd312d','#31393c','#2176ff','#06a77d'];
-    this.props.changePalette(palette);
-    this.props.state.mandelbrot.recolor(palette);
-  }
-
-  resize = () => {
-    this.props.resize(1200);
-    this.props.state.mandelbrot.resize(1200, 800);
-  }
 
   render() {
     return (
@@ -49,18 +38,8 @@ class Draw extends Component {
             <Button basic color="purple" onClick={this.resetCanvas}>
               Reset
             </Button>
-            <Button
-              basic
-              color="orange"
-              onClick={this.resize}
-            >
-              Resize
-            </Button>
             <Button basic color="blue" onClick={this.props.state.mandelbrot.save}>
               Save
-            </Button>
-            <Button basic color="red" onClick={this.changePalette}>
-              Palette
             </Button>
           </div>
           <div>Zoom: {this.props.state.zoomConst}</div>
