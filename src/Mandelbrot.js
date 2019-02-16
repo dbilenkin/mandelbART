@@ -1,4 +1,6 @@
 import saveAs from "file-saver";
+import { Decimal } from "decimal.js";
+import MandelbrotWorker from "./mandelbrot.worker";
 
 export default class Mandelbrot {
   initGrid = () => {
@@ -22,16 +24,14 @@ export default class Mandelbrot {
     return { r, g, b };
   };
 
-  // let this.state.palette = ['644536','B2675E','C4A381','BBD686','EEF1BD'];
-  // let this.state.palette = ['34356D','FF5C52','FEE84D','6BAE58','A7DBEA'];
-  // let this.state.palette = ['faa916','bd312d','31393c','2176ff','06a77d'];
-
   makeColorsFromPalette = () => {
     this.colors = [];
-    const rgbPalette = this.state.palette.map(color => this.hexToRgb(color));
-    for (let i = 0; i < this.state.palette.length; i++) {
+    const rgbPalette = this.state.palette.colors.map(color =>
+      this.hexToRgb(color)
+    );
+    for (let i = 0; i < this.state.palette.colors.length; i++) {
       const c1 = rgbPalette[i];
-      const c2 = rgbPalette[(i + 1) % this.state.palette.length];
+      const c2 = rgbPalette[(i + 1) % this.state.palette.colors.length];
       const diffs = [c2.r - c1.r, c2.g - c1.g, c2.b - c1.b];
 
       for (let j = 0; j < this.state.colorSmooth; j++) {
@@ -62,7 +62,7 @@ export default class Mandelbrot {
     const i = this.mandelbrot({ a, b });
     this.grid[point.x][point.y] = i;
     this.ctx.fillStyle =
-      i === -1 ? "#BF0A30" : this.colors[i % this.colors.length];
+      i === -1 ? "#000000" : this.colors[i % this.colors.length];
     this.ctx.fillRect(point.x, point.y, 1, 1);
   };
 
@@ -74,7 +74,7 @@ export default class Mandelbrot {
       for (let y = 0; y < this.height; y++) {
         const i = this.grid[x][y];
         this.ctx.fillStyle =
-          i === -1 ? "#BF0A30" : this.colors[i % this.colors.length];
+          i === -1 ? "#000000" : this.colors[i % this.colors.length];
         this.ctx.fillRect(x, y, 1, 1);
       }
     }
@@ -109,9 +109,53 @@ export default class Mandelbrot {
     }
   };
 
+  initWorkers = () => {
+    this.workers = [];
+    for (let i = 0; i < this.state.countWorkers; i++) {
+      const worker = new MandelbrotWorker();
+      this.workers.push(worker);
+    }
+  }
+
+  colorRow = (row, x) => {
+      for (let y = 0; y < row.length; y++) {
+        const i = row[y];
+        this.ctx.fillStyle =
+          i === -1 ? "#000000" : this.colors[i % this.colors.length];
+        this.ctx.fillRect(x, y, 1, 1);
+      }
+  }
+
   goThroughPoints = cb => {
-    for (let x = 0; x < this.width; x++) {
-      setTimeout(() => this.goThroughRow(x, cb), 0);
+    if (this.state.countWorkers > 1) {
+      const that = this;
+      for (let x = 0; x < this.grid.length; x++) {
+        const worker = this.workers[x%this.state.countWorkers];
+
+        worker.postMessage({
+          x: x,
+          m: {
+            topLeft: that.state.topLeft,
+            iterations: that.state.iterations,
+            height: that.height,
+            xZoomConst: that.xZoomConst,
+            yZoomConst: that.yZoomConst
+          }
+        });
+
+        worker.addEventListener("message", evt => {
+          if (evt.data.message === "done") {
+            const row = evt.data.row;
+            const x = evt.data.x;
+            this.grid[x] = row;
+            setTimeout(() => this.colorRow(row, x), 0);
+          }
+        });
+      }
+    } else {
+      for (let x = 0; x < this.width; x++) {
+        setTimeout(() => this.goThroughRow(x, cb), 0);
+      }
     }
   };
 
@@ -177,6 +221,7 @@ export default class Mandelbrot {
     this.width = canvas.width;
     this.height = canvas.height;
     this.initGrid();
+    this.initWorkers();
     this.makeColorsFromPalette();
     this.xZoomConst = (this.width * this.state.zoomConst) / 3;
     this.yZoomConst = this.state.zoomConst / (3 / this.width);

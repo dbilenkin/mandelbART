@@ -3,11 +3,11 @@ import "./App.css";
 import Draw from "./components/Draw";
 import ColorPicker from "./components/ColorPicker";
 import "semantic-ui-css/semantic.min.css";
-import { Menu, Button } from "semantic-ui-react";
-import { getRandomColor, getLeftOrRight } from "./utils";
+import { Menu, Button, Dropdown } from "semantic-ui-react";
 import { sampleRules } from "./samples";
 import queryString from "query-string";
 import Mandelbrot from "./Mandelbrot";
+import palettes from "./palettes";
 
 class App extends Component {
   state = {
@@ -16,12 +16,17 @@ class App extends Component {
       a: -2,
       b: -1
     },
-    palette: ["#264653", "#2a9d8f", "#e9c46a", "#f4a261", "#e76f51"],
+    palette: {
+      name: "Default",
+      colors: ["#264653", "#2a9d8f", "#e9c46a", "#f4a261", "#e76f51"]
+    },
     zoomConst: 1,
     zoomFactor: 10,
     colorSmooth: 500,
     iterations: 10000,
-    width: 600
+    width: 600,
+    // countWorkers: navigator.hardwareConcurrency
+    countWorkers: 600
   };
 
   NUM_RULES = Math.floor(Math.random() * 10) + 1;
@@ -73,7 +78,7 @@ class App extends Component {
   changeSmooth = event => {
     this.setState({ colorSmooth: event.target.value });
     this.state.mandelbrot.recolor(this.state.palette, event.target.value);
-  }
+  };
 
   toggleRunning = () => {
     this.setState({ running: !this.state.running });
@@ -83,12 +88,7 @@ class App extends Component {
     this.setState(sampleRules(name));
   };
 
-  changePalette = () => {
-    // const palette = ["#faa916", "#bd312d", "#31393c", "#2176ff", "#06a77d"];
-    // const palette = ['#34356D','#FF5C52','#FEE84D','#6BAE58','#A7DBEA'];
-    // const palette = ['#ffffff','#000000'];
-    // const palette = ['#BF0A30','#ffffff','#002868'];
-    const palette = ['#BF0A30','#ffffff'];
+  changePalette = (palette) => {
     this.setState({ palette });
     this.state.mandelbrot.recolor(palette);
   };
@@ -106,13 +106,13 @@ class App extends Component {
         b: -1
       },
       zoomConst: 1
-    })
+    });
     this.state.mandelbrot.reset();
-  }
+  };
 
   save = () => {
     this.state.mandelbrot.save();
-  }
+  };
 
   hexToRGB = hex => {
     var r = parseInt(hex.slice(1, 3), 16),
@@ -128,10 +128,20 @@ class App extends Component {
       <div className={`app-${this.state.width}`}>
         <Menu text>
           <Menu.Item header>MandelbART</Menu.Item>
-          <Menu.Item name="cool" onClick={this.handleItemClick} />
-          <Menu.Item name="themes" onClick={this.handleItemClick} />
+          <Menu.Item name="Samples" onClick={this.handleItemClick} />
+          <Dropdown item text={this.state.palette.name}>
+            <Dropdown.Menu>
+              {palettes
+                .filter(palette => palette.name !== this.state.palette.name)
+                .map((palette, i) => (
+                  <Dropdown.Item key={i} onClick={() => this.changePalette(palette)}>
+                    {palette.name}
+                  </Dropdown.Item>
+                ))}
+            </Dropdown.Menu>
+          </Dropdown>
           <Menu.Item>
-            {this.state.palette.map((color, index) => (
+            {this.state.palette.colors.map((color, index) => (
               <ColorPicker
                 index={index}
                 changeColor={this.changeColor}
@@ -140,25 +150,20 @@ class App extends Component {
             ))}
           </Menu.Item>
           <Menu.Item>
-          <div className="sliders">
-            <input
-              type="range"
-              id="colorSmooth"
-              value={this.state.colorSmooth}
-              name="colorSmooth"
-              min="1"
-              max="1000"
-              onChange={this.changeSmooth}
-            />
-            <label htmlFor="iterations">
-              Color Smooth: {this.state.colorSmooth}
-            </label>
-          </div>
-          </Menu.Item>
-          <Menu.Item>
-            <Button basic color="red" onClick={this.changePalette}>
-              Palette
-            </Button>
+            <div className="sliders">
+              <input
+                type="range"
+                id="colorSmooth"
+                value={this.state.colorSmooth}
+                name="colorSmooth"
+                min="1"
+                max="1000"
+                onChange={this.changeSmooth}
+              />
+              <label htmlFor="iterations">
+                Color Smooth: {this.state.colorSmooth}
+              </label>
+            </div>
           </Menu.Item>
           <Menu.Item>
             <Button basic color="orange" onClick={this.resize}>

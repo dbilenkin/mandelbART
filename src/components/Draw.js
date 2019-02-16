@@ -39,7 +39,7 @@ class Draw extends Component {
             </Button>
             <div id="savePercentage"></div>
           </div>
-          <div>Zoom: {this.props.state.zoomConst}</div>
+          <div>Zoom: {this.props.state.zoomConst.toExponential()}</div>
           <div className="sliders">
             <input
               type="range"

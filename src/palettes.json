@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Default",
+    "colors": ["#264653", "#2a9d8f", "#e9c46a", "#f4a261", "#e76f51"]
+  },
+  {
+    "name": "Orangy",
+    "colors": ["#faa916", "#bd312d", "#31393c", "#2176ff", "#06a77d"]
+  },
+  {
+    "name": "Starry Byte",
+    "colors": ["#17207E", "#C3AC31", "#CBCBCF"]
+  },
+  {
+    "name": "Gray Scale",
+    "colors": ["#ffffff","#000000"]
+  },
+  {
+    "name": "Red & White",
+    "colors": ["#BF0A30", "#ffffff"]
+  }
+]
