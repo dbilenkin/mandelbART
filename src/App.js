@@ -7,7 +7,7 @@ import Gallery from "./components/Gallery";
 import About from "./components/About";
 
 const App = () => (
-  <Router>
+  <Router basename={process.env.PUBLIC_URL}>
     <div>
       <div className={`app-600`}>
         <Menu text>
