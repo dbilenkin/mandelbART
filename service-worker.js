@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/mandelbART/precache-manifest.b07fce2ab39975dcf1c9c4e3aa8e58bc.js"
+  "/mandelbART/precache-manifest.ae265303457ecb1a40a33ce1e8ad28d8.js"
 );
 
 workbox.clientsClaim();

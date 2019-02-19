@@ -1,14 +1,14 @@
 {
   "main.css": "/mandelbART/static/css/main.9def522d.chunk.css",
-  "main.js": "/mandelbART/static/js/main.f51c9f51.chunk.js",
-  "main.js.map": "/mandelbART/static/js/main.f51c9f51.chunk.js.map",
+  "main.js": "/mandelbART/static/js/main.065c2819.chunk.js",
+  "main.js.map": "/mandelbART/static/js/main.065c2819.chunk.js.map",
   "static/css/1.b2d9e2c4.chunk.css": "/mandelbART/static/css/1.b2d9e2c4.chunk.css",
-  "static/js/1.b41c618e.chunk.js": "/mandelbART/static/js/1.b41c618e.chunk.js",
-  "static/js/1.b41c618e.chunk.js.map": "/mandelbART/static/js/1.b41c618e.chunk.js.map",
+  "static/js/1.c6bde42b.chunk.js": "/mandelbART/static/js/1.c6bde42b.chunk.js",
+  "static/js/1.c6bde42b.chunk.js.map": "/mandelbART/static/js/1.c6bde42b.chunk.js.map",
   "runtime~main.js": "/mandelbART/static/js/runtime~main.8d0c900e.js",
   "runtime~main.js.map": "/mandelbART/static/js/runtime~main.8d0c900e.js.map",
   "static/media/mandelbrot_-1.1497095099999999_-0.3122214449999999_10000000_13_faa916-bd312d-31393c-2176ff-06a77d_6.png": "/mandelbART/static/media/mandelbrot_-1.1497095099999999_-0.3122214449999999_10000000_13_faa916-bd312d-31393c-2176ff-06a77d_6.1e42e6c3.png",
-  "static/media/semantic.min.css": "/mandelbART/static/media/icons.8e3c7f55.eot",
+  "static/media/semantic.min.css": "/mandelbART/static/media/icons.0ab54153.woff2",
   "static/media/mandelbrot_-0.28107499999999996_-0.63755_400_13_faa916-bd312d-31393c-06a77d_7.png": "/mandelbART/static/media/mandelbrot_-0.28107499999999996_-0.63755_400_13_faa916-bd312d-31393c-06a77d_7.cf00701f.png",
   "static/media/mandelbrot_-0.3117999999999999_-0.6501999999999999_1000_13_f2d7ee-d3bcc0-a5668b-69306d-0e103d_5.png": "/mandelbART/static/media/mandelbrot_-0.3117999999999999_-0.6501999999999999_1000_13_f2d7ee-d3bcc0-a5668b-69306d-0e103d_5.9180a82d.png",
   "static/media/mandelbrot_-0.42296777_-0.60383495_10000000_13_faa916-bd312d-31393c-2176ff-06a77d_8.png": "/mandelbART/static/media/mandelbrot_-0.42296777_-0.60383495_10000000_13_faa916-bd312d-31393c-2176ff-06a77d_8.1a9ddc49.png",
@@ -29,6 +29,6 @@
   "static/css/main.9def522d.chunk.css.map": "/mandelbART/static/css/main.9def522d.chunk.css.map",
   "static/css/1.b2d9e2c4.chunk.css.map": "/mandelbART/static/css/1.b2d9e2c4.chunk.css.map",
   "index.html": "/mandelbART/index.html",
-  "precache-manifest.b07fce2ab39975dcf1c9c4e3aa8e58bc.js": "/mandelbART/precache-manifest.b07fce2ab39975dcf1c9c4e3aa8e58bc.js",
+  "precache-manifest.ae265303457ecb1a40a33ce1e8ad28d8.js": "/mandelbART/precache-manifest.ae265303457ecb1a40a33ce1e8ad28d8.js",
   "service-worker.js": "/mandelbART/service-worker.js"
 }
