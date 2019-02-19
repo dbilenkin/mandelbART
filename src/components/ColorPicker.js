@@ -1,69 +1,87 @@
-import React from 'react'
-import reactCSS from 'reactcss'
-import { SketchPicker } from 'react-color'
+import React from "react";
+import reactCSS from "reactcss";
+import { SketchPicker } from "react-color";
 
 class ColorPicker extends React.Component {
   state = {
-    displayColorPicker: false,
+    displayColorPicker: false
   };
 
   handleClick = () => {
-    this.setState({ displayColorPicker: !this.state.displayColorPicker })
+    this.setState({ displayColorPicker: !this.state.displayColorPicker });
   };
 
   handleClose = () => {
-    this.setState({ displayColorPicker: false })
+    this.setState({ displayColorPicker: false });
   };
 
-  handleChange = (color) => {
+  handleChange = color => {
     this.props.changeColor(this.props.index, color);
   };
 
-  render() {
+  handleDelete = () => {
+    this.props.deleteColor(this.props.index);
+  };
 
+  render() {
     const styles = reactCSS({
-      'default': {
+      default: {
         color: {
-          width: '36px',
-          height: '14px',
-          borderRadius: '2px',
-          background: `rgba(${ this.props.color.r }, ${ this.props.color.g }, ${ this.props.color.b }, ${ this.props.color.a })`,
+          width: "20px",
+          height: "14px",
+          borderRadius: "2px",
+          background: `rgba(${this.props.color.r}, ${this.props.color.g}, ${
+            this.props.color.b
+          }, ${this.props.color.a})`
         },
         swatch: {
-          padding: '5px',
-          background: '#fff',
-          borderRadius: '1px',
-          boxShadow: '0 0 0 1px rgba(0,0,0,.1)',
-          display: 'inline-block',
-          cursor: 'pointer',
+          padding: "2px",
+          background: "#fff",
+          borderRadius: "1px",
+          boxShadow: "0 0 0 1px rgba(0,0,0,.1)",
+          display: "inline-block",
+          cursor: "pointer",
+          textAlign: "center",
+          margin: "2px"
+        },
+        x: {
+          color: "red",
+          paddingBottom: "2px"
         },
         popover: {
-          position: 'absolute',
-          zIndex: '2',
+          position: "absolute",
+          zIndex: "2"
         },
         cover: {
-          position: 'fixed',
-          top: '0px',
-          right: '0px',
-          bottom: '0px',
-          left: '0px',
-        },
-      },
+          position: "fixed",
+          top: "0px",
+          right: "0px",
+          bottom: "0px",
+          left: "0px"
+        }
+      }
     });
 
     return (
-      <div>
-        <div style={ styles.swatch } onClick={ this.handleClick }>
-          <div style={ styles.color } />
+      <div style={styles.swatch}>
+        <div style={styles.x} onClick={this.handleDelete}>
+          x
         </div>
-        { this.state.displayColorPicker ? <div style={ styles.popover }>
-          <div style={ styles.cover } onClick={ this.handleClose }/>
-          <SketchPicker color={ this.props.color } onChange={ this.handleChange } />
-        </div> : null }
-
+        <div onClick={this.handleClick}>
+          <div style={styles.color} />
+        </div>
+        {this.state.displayColorPicker ? (
+          <div style={styles.popover}>
+            <div style={styles.cover} onClick={this.handleClose} />
+            <SketchPicker
+              color={this.props.color}
+              onChange={this.handleChange}
+            />
+          </div>
+        ) : null}
       </div>
-    )
+    );
   }
 }
 
-export default ColorPicker
+export default ColorPicker;

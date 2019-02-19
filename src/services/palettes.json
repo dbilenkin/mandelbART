@@ -1,0 +1,34 @@
+[
+  {
+    "name": "First",
+    "colors": ["#264653", "#2a9d8f", "#e9c46a", "#f4a261", "#e76f51"]
+  },
+  {
+    "name": "Second",
+    "colors": ["#faa916", "#bd312d", "#31393c", "#2176ff", "#06a77d"]
+  },
+  {
+    "name": "Starry Byte",
+    "colors": ["#123f77", "#0f86b6", "#37cae5", "#f5db37", "#fbefcb"]
+  },
+  {
+    "name": "Lilacs",
+    "colors": ["#f2d7ee", "#d3bcc0", "#a5668b", "#69306d", "#0e103d"]
+  },
+  {
+    "name": "Earth",
+    "colors": ["#56B7BE", "#8BDA91", "#2E5E48", "#407F50", "#97925A"]
+  },
+  {
+    "name": "Rainbow",
+    "colors": ["#FF2600", "#FFA900", "#FFFC00", "#02A601", "#0433FF", "#AC2CD7"]
+  },
+  {
+    "name": "Autumn",
+    "colors": ["#F1B711", "#F28E16", "#F25C0A", "#BF2706", "#730502"]
+  },
+  {
+    "name": "Gray Scale",
+    "colors": ["#ffffff", "#000000"]
+  }
+]
