@@ -1,10 +1,10 @@
 self.__precacheManifest = [
   {
-    "revision": "a046592bac8f2fd96e994733faf3858c",
-    "url": "/mandelbART/static/media/brand-icons.a046592b.woff"
+    "revision": "13db00b7a34fee4d819ab7f9838cc428",
+    "url": "/mandelbART/static/media/brand-icons.13db00b7.eot"
   },
   {
-    "revision": "07795975b50212e8ef21",
+    "revision": "bbbdec6ef59fde4b7592",
     "url": "/mandelbART/static/css/main.9def522d.chunk.css"
   },
   {
@@ -24,12 +24,12 @@ self.__precacheManifest = [
     "url": "/mandelbART/static/media/flags.9c74e172.png"
   },
   {
-    "revision": "8e3c7f5520f5ae906c6cf6d7f3ddcd19",
-    "url": "/mandelbART/static/media/icons.8e3c7f55.eot"
-  },
-  {
     "revision": "0ab54153eeeca0ce03978cc463b257f7",
     "url": "/mandelbART/static/media/icons.0ab54153.woff2"
+  },
+  {
+    "revision": "8e3c7f5520f5ae906c6cf6d7f3ddcd19",
+    "url": "/mandelbART/static/media/icons.8e3c7f55.eot"
   },
   {
     "revision": "faff92145777a3cbaf8e7367b4807987",
@@ -52,28 +52,28 @@ self.__precacheManifest = [
     "url": "/mandelbART/static/media/outline-icons.ef60a4f6.woff"
   },
   {
-    "revision": "962a1bf31c081691065fe333d9fa8105",
-    "url": "/mandelbART/static/media/icons.962a1bf3.svg"
-  },
-  {
     "revision": "ad97afd3337e8cda302d10ff5a4026b8",
     "url": "/mandelbART/static/media/outline-icons.ad97afd3.ttf"
+  },
+  {
+    "revision": "962a1bf31c081691065fe333d9fa8105",
+    "url": "/mandelbART/static/media/icons.962a1bf3.svg"
   },
   {
     "revision": "82f60bd0b94a1ed68b1e6e309ce2e8c3",
     "url": "/mandelbART/static/media/outline-icons.82f60bd0.svg"
   },
   {
-    "revision": "13db00b7a34fee4d819ab7f9838cc428",
-    "url": "/mandelbART/static/media/brand-icons.13db00b7.eot"
-  },
-  {
     "revision": "e8c322de9658cbeb8a774b6624167c2c",
     "url": "/mandelbART/static/media/brand-icons.e8c322de.woff2"
   },
   {
-    "revision": "07795975b50212e8ef21",
-    "url": "/mandelbART/static/js/main.07795975.chunk.js"
+    "revision": "a046592bac8f2fd96e994733faf3858c",
+    "url": "/mandelbART/static/media/brand-icons.a046592b.woff"
+  },
+  {
+    "revision": "bbbdec6ef59fde4b7592",
+    "url": "/mandelbART/static/js/main.bbbdec6e.chunk.js"
   },
   {
     "revision": "c5ebe0b32dc1b5cc449a76c4204d13bb",
@@ -144,7 +144,7 @@ self.__precacheManifest = [
     "url": "/mandelbART/static/css/1.b2d9e2c4.chunk.css"
   },
   {
-    "revision": "d49058b91ad818da49450d369866c4e1",
+    "revision": "d5855e1837ea931376859a9ce3e75cb0",
     "url": "/mandelbART/index.html"
   }
 ];
