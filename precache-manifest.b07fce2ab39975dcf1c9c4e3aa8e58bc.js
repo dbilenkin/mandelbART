@@ -1,10 +1,10 @@
 self.__precacheManifest = [
   {
-    "revision": "e8c322de9658cbeb8a774b6624167c2c",
-    "url": "/mandelbART/static/media/brand-icons.e8c322de.woff2"
+    "revision": "a1a749e89f578a49306ec2b055c073da",
+    "url": "/mandelbART/static/media/brand-icons.a1a749e8.svg"
   },
   {
-    "revision": "26c6d5f112e0314b240e",
+    "revision": "f51c9f516f0a5053623c",
     "url": "/mandelbART/static/css/main.9def522d.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = [
     "url": "/mandelbART/static/media/mandelbrot_0.25426710695000015_0.0004855942999999996_2000000000_13_faa916-bd312d-31393c-2176ff-06a77d_9.0382c655.png"
   },
   {
-    "revision": "e8b899922609e931f8d4",
-    "url": "/mandelbART/static/js/1.e8b89992.chunk.js"
+    "revision": "b41c618e3375f0813acd",
+    "url": "/mandelbART/static/js/1.b41c618e.chunk.js"
   },
   {
     "revision": "8d0c900e2b410b0301aa",
@@ -24,44 +24,48 @@ self.__precacheManifest = [
     "url": "/mandelbART/static/media/flags.9c74e172.png"
   },
   {
-    "revision": "faff92145777a3cbaf8e7367b4807987",
-    "url": "/mandelbART/static/media/icons.faff9214.woff"
+    "revision": "8e3c7f5520f5ae906c6cf6d7f3ddcd19",
+    "url": "/mandelbART/static/media/icons.8e3c7f55.eot"
   },
   {
     "revision": "0ab54153eeeca0ce03978cc463b257f7",
     "url": "/mandelbART/static/media/icons.0ab54153.woff2"
   },
   {
-    "revision": "8e3c7f5520f5ae906c6cf6d7f3ddcd19",
-    "url": "/mandelbART/static/media/icons.8e3c7f55.eot"
+    "revision": "faff92145777a3cbaf8e7367b4807987",
+    "url": "/mandelbART/static/media/icons.faff9214.woff"
   },
   {
     "revision": "b87b9ba532ace76ae9f6edfe9f72ded2",
     "url": "/mandelbART/static/media/icons.b87b9ba5.ttf"
   },
   {
-    "revision": "701ae6abd4719e9c2ada3535a497b341",
-    "url": "/mandelbART/static/media/outline-icons.701ae6ab.eot"
-  },
-  {
     "revision": "cd6c777f1945164224dee082abaea03a",
     "url": "/mandelbART/static/media/outline-icons.cd6c777f.woff2"
   },
   {
-    "revision": "ef60a4f6c25ef7f39f2d25a748dbecfe",
-    "url": "/mandelbART/static/media/outline-icons.ef60a4f6.woff"
-  },
-  {
-    "revision": "ad97afd3337e8cda302d10ff5a4026b8",
-    "url": "/mandelbART/static/media/outline-icons.ad97afd3.ttf"
+    "revision": "701ae6abd4719e9c2ada3535a497b341",
+    "url": "/mandelbART/static/media/outline-icons.701ae6ab.eot"
   },
   {
     "revision": "962a1bf31c081691065fe333d9fa8105",
     "url": "/mandelbART/static/media/icons.962a1bf3.svg"
   },
   {
+    "revision": "ad97afd3337e8cda302d10ff5a4026b8",
+    "url": "/mandelbART/static/media/outline-icons.ad97afd3.ttf"
+  },
+  {
     "revision": "82f60bd0b94a1ed68b1e6e309ce2e8c3",
     "url": "/mandelbART/static/media/outline-icons.82f60bd0.svg"
+  },
+  {
+    "revision": "ef60a4f6c25ef7f39f2d25a748dbecfe",
+    "url": "/mandelbART/static/media/outline-icons.ef60a4f6.woff"
+  },
+  {
+    "revision": "e8c322de9658cbeb8a774b6624167c2c",
+    "url": "/mandelbART/static/media/brand-icons.e8c322de.woff2"
   },
   {
     "revision": "13db00b7a34fee4d819ab7f9838cc428",
@@ -72,16 +76,12 @@ self.__precacheManifest = [
     "url": "/mandelbART/static/media/brand-icons.a046592b.woff"
   },
   {
-    "revision": "26c6d5f112e0314b240e",
-    "url": "/mandelbART/static/js/main.26c6d5f1.chunk.js"
-  },
-  {
     "revision": "c5ebe0b32dc1b5cc449a76c4204d13bb",
     "url": "/mandelbART/static/media/brand-icons.c5ebe0b3.ttf"
   },
   {
-    "revision": "a1a749e89f578a49306ec2b055c073da",
-    "url": "/mandelbART/static/media/brand-icons.a1a749e8.svg"
+    "revision": "f51c9f516f0a5053623c",
+    "url": "/mandelbART/static/js/main.f51c9f51.chunk.js"
   },
   {
     "revision": "cf00701f42526ea3bc5d7f832a823272",
@@ -136,15 +136,27 @@ self.__precacheManifest = [
     "url": "/mandelbART/static/media/mandelbrot_0.25419450000000016_0.00042849999999999963_100000_13_56B7BE-8BDA91-2E5E48-407F50-97925A_7.902d4a20.png"
   },
   {
+    "revision": "79429b863a0ce2166d0a691b1fc20a17",
+    "url": "/mandelbART/static/media/mandelbrot_0.25421014500000017_0.0004328449999999996_10000000_13_123f77-0f86b6-37cae5-f5db37-fbefcb_7.79429b86.png"
+  },
+  {
+    "revision": "d595bee601b537001105c04e03d85c0e",
+    "url": "/mandelbART/static/media/mandelbrot_0.25421027550000014_0.0004329344999999996_100000000_13_faa916-bd312d-31393c-2176ff-06a77d_7.d595bee6.png"
+  },
+  {
+    "revision": "b245dec0c5da91a61e1e55cc6d0081ef",
+    "url": "/mandelbART/static/media/mandelbrot_0.25421028637500015_0.0004329410499999996_400000000_13_264653-2a9d8f-e9c46a-f4a261-e76f51_7.b245dec0.png"
+  },
+  {
     "revision": "25e7dc90008bb321709f8549cd5b7bf9",
     "url": "/mandelbART/static/media/mandelbrot_0.2542627000000002_0.00048324999999999963_200000_13_123f77-0f86b6-37cae5-f5db37-fbefcb_9.25e7dc90.png"
   },
   {
-    "revision": "e8b899922609e931f8d4",
+    "revision": "b41c618e3375f0813acd",
     "url": "/mandelbART/static/css/1.b2d9e2c4.chunk.css"
   },
   {
-    "revision": "28f98e017369470f20278da54b931bbe",
+    "revision": "bddacc8f5cbebc2415b457886487b47e",
     "url": "/mandelbART/index.html"
   }
 ];
