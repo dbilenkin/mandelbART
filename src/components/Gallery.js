@@ -25,6 +25,7 @@ const getPath = image => {
   return `/home${removedTail
     .substring(0, removedTail.lastIndexOf("."))
     .replace("/static/media/mandelbrot", "")
+    .replace("/mandelbART", "")
     .replace(/_/g, "/")}`;
 };
 
