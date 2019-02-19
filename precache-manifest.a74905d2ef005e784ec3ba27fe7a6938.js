@@ -1,10 +1,10 @@
 self.__precacheManifest = [
   {
-    "revision": "13db00b7a34fee4d819ab7f9838cc428",
-    "url": "/mandelbART/static/media/brand-icons.13db00b7.eot"
+    "revision": "e8c322de9658cbeb8a774b6624167c2c",
+    "url": "/mandelbART/static/media/brand-icons.e8c322de.woff2"
   },
   {
-    "revision": "bbbdec6ef59fde4b7592",
+    "revision": "26c6d5f112e0314b240e",
     "url": "/mandelbART/static/css/main.9def522d.chunk.css"
   },
   {
@@ -24,16 +24,16 @@ self.__precacheManifest = [
     "url": "/mandelbART/static/media/flags.9c74e172.png"
   },
   {
+    "revision": "faff92145777a3cbaf8e7367b4807987",
+    "url": "/mandelbART/static/media/icons.faff9214.woff"
+  },
+  {
     "revision": "0ab54153eeeca0ce03978cc463b257f7",
     "url": "/mandelbART/static/media/icons.0ab54153.woff2"
   },
   {
     "revision": "8e3c7f5520f5ae906c6cf6d7f3ddcd19",
     "url": "/mandelbART/static/media/icons.8e3c7f55.eot"
-  },
-  {
-    "revision": "faff92145777a3cbaf8e7367b4807987",
-    "url": "/mandelbART/static/media/icons.faff9214.woff"
   },
   {
     "revision": "b87b9ba532ace76ae9f6edfe9f72ded2",
@@ -64,16 +64,16 @@ self.__precacheManifest = [
     "url": "/mandelbART/static/media/outline-icons.82f60bd0.svg"
   },
   {
-    "revision": "e8c322de9658cbeb8a774b6624167c2c",
-    "url": "/mandelbART/static/media/brand-icons.e8c322de.woff2"
+    "revision": "13db00b7a34fee4d819ab7f9838cc428",
+    "url": "/mandelbART/static/media/brand-icons.13db00b7.eot"
   },
   {
     "revision": "a046592bac8f2fd96e994733faf3858c",
     "url": "/mandelbART/static/media/brand-icons.a046592b.woff"
   },
   {
-    "revision": "bbbdec6ef59fde4b7592",
-    "url": "/mandelbART/static/js/main.bbbdec6e.chunk.js"
+    "revision": "26c6d5f112e0314b240e",
+    "url": "/mandelbART/static/js/main.26c6d5f1.chunk.js"
   },
   {
     "revision": "c5ebe0b32dc1b5cc449a76c4204d13bb",
@@ -144,7 +144,7 @@ self.__precacheManifest = [
     "url": "/mandelbART/static/css/1.b2d9e2c4.chunk.css"
   },
   {
-    "revision": "d5855e1837ea931376859a9ce3e75cb0",
+    "revision": "28f98e017369470f20278da54b931bbe",
     "url": "/mandelbART/index.html"
   }
 ];

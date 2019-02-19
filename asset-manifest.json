@@ -1,14 +1,14 @@
 {
   "main.css": "/mandelbART/static/css/main.9def522d.chunk.css",
-  "main.js": "/mandelbART/static/js/main.bbbdec6e.chunk.js",
-  "main.js.map": "/mandelbART/static/js/main.bbbdec6e.chunk.js.map",
+  "main.js": "/mandelbART/static/js/main.26c6d5f1.chunk.js",
+  "main.js.map": "/mandelbART/static/js/main.26c6d5f1.chunk.js.map",
   "static/css/1.b2d9e2c4.chunk.css": "/mandelbART/static/css/1.b2d9e2c4.chunk.css",
   "static/js/1.e8b89992.chunk.js": "/mandelbART/static/js/1.e8b89992.chunk.js",
   "static/js/1.e8b89992.chunk.js.map": "/mandelbART/static/js/1.e8b89992.chunk.js.map",
   "runtime~main.js": "/mandelbART/static/js/runtime~main.8d0c900e.js",
   "runtime~main.js.map": "/mandelbART/static/js/runtime~main.8d0c900e.js.map",
   "static/media/mandelbrot_-0.7509985_-0.025208999999999933_50000_13_FF2600-FFA900-FFFC00-02A601-0433FF-AC2CD7_9.png": "/mandelbART/static/media/mandelbrot_-0.7509985_-0.025208999999999933_50000_13_FF2600-FFA900-FFFC00-02A601-0433FF-AC2CD7_9.c0eb2811.png",
-  "static/media/semantic.min.css": "/mandelbART/static/media/icons.0ab54153.woff2",
+  "static/media/semantic.min.css": "/mandelbART/static/media/icons.faff9214.woff",
   "static/media/mandelbrot_-0.28107499999999996_-0.63755_400_13_faa916-bd312d-31393c-06a77d_7.png": "/mandelbART/static/media/mandelbrot_-0.28107499999999996_-0.63755_400_13_faa916-bd312d-31393c-06a77d_7.cf00701f.png",
   "static/media/mandelbrot_-0.3117999999999999_-0.6501999999999999_1000_13_f2d7ee-d3bcc0-a5668b-69306d-0e103d_5.png": "/mandelbART/static/media/mandelbrot_-0.3117999999999999_-0.6501999999999999_1000_13_f2d7ee-d3bcc0-a5668b-69306d-0e103d_5.9180a82d.png",
   "static/media/mandelbrot_-0.42296777_-0.60383495_10000000_13_faa916-bd312d-31393c-2176ff-06a77d_8.png": "/mandelbART/static/media/mandelbrot_-0.42296777_-0.60383495_10000000_13_faa916-bd312d-31393c-2176ff-06a77d_8.1a9ddc49.png",
@@ -26,6 +26,6 @@
   "static/css/main.9def522d.chunk.css.map": "/mandelbART/static/css/main.9def522d.chunk.css.map",
   "static/css/1.b2d9e2c4.chunk.css.map": "/mandelbART/static/css/1.b2d9e2c4.chunk.css.map",
   "index.html": "/mandelbART/index.html",
-  "precache-manifest.adf871f940261ad06927b16fc585ab13.js": "/mandelbART/precache-manifest.adf871f940261ad06927b16fc585ab13.js",
+  "precache-manifest.a74905d2ef005e784ec3ba27fe7a6938.js": "/mandelbART/precache-manifest.a74905d2ef005e784ec3ba27fe7a6938.js",
   "service-worker.js": "/mandelbART/service-worker.js"
 }
